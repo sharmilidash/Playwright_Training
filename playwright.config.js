@@ -17,10 +17,10 @@ export default defineConfig({
   //testDir: './tests/',
   //testDir: './tests/Salesforce_Test/',
   //testDir: './tests/UI_Special_Control/',
-  testDir: './tests/NICE_UI_Tests/',
-  //testDir: './tests/UI_Test/',
+  //testDir: './tests/NICE_UI_Tests/',
+  testDir: './tests/UI_Test/',
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   workers:1,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
@@ -58,7 +58,7 @@ export default defineConfig({
       },
       },
     ]
-    },
+  },
 
     //  {
     //    name: 'firefox',
@@ -89,7 +89,7 @@ export default defineConfig({
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
-  ],
+  
 
   /* Run your local dev server before starting the tests */
   // webServer: {
@@ -97,5 +97,8 @@ export default defineConfig({
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
-});
+);
+
+
+
 
